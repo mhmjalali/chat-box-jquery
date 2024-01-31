@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    font-family: 'Iranian Sans', sans-serif;
+}
+
+.chat-box {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 500px;
+    background: #EEF5FF;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section {
+    height: 60px;
+    background-color: #12372A;
+    display: flex;
+    align-items: center;
+    .user-image {
+        background: #fff;
+        border-radius: 50%;
+        padding: 12px;
+        margin: 0 5px;
+        i {
+            font-size: 1.3rem;
+            color: #12372A;
+        }
+    }
+    .user-name {
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin: 0 10px;
+    }
+}
+
+.history-section {
+    flex: 1;
+    width: 100%;
+    background-color: #436850;
+    overflow-y: auto;
+}
+
+.typing-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #4b8581;
+    height: 55px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.input-input {
+    grid-column: 1 / 5;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0px 10px;
+    &:active,
+    &:focus {
+        border: none;
+    }
+}
+
+.send-icon-button {
+    grid-column: 5 / 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2aa819;
+    border: none;
+    i {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+}

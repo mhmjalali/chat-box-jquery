@@ -10,86 +10,99 @@ body {
     align-items: center;
     justify-content: center;
     direction: rtl;
-    font-family: 'Iranian Sans', sans-serif;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 .chat-box {
-    position: relative;
+    border-radius: 10px;
     overflow: hidden;
-    width: 400px;
-    height: 500px;
-    background: #EEF5FF;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.header-section {
-    height: 60px;
-    background-color: #12372A;
-    display: flex;
-    align-items: center;
-    .user-image {
-        background: #fff;
-        border-radius: 50%;
-        padding: 12px;
-        margin: 0 5px;
-        i {
-            font-size: 1.3rem;
-            color: #12372A;
+    .messaging-box {
+        background: #93B1A6;
+        border-top: 2px solid #e1e1e1;
+        .input-box {
+            margin-left: 10px;
+        }
+        .type-message {
+            height: 45px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            padding: 0 10px;
+            border: 1px solid #eff0ec;
+            background: #fff;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+        .send-message {
+            background: #304D30;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            width: 45px;
+            height: 45px;
+            font-size: 1.6rem;
+            color: #fff;
+            transition: 0.3s all;
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            }
+            .send-icon {
+                rotate: 180deg;
+            }
         }
     }
-    .user-name {
-        color: #fff;
-        font-weight: 500;
-        font-size: 1.2rem;
-        margin: 0 10px;
+    .title-box {
+        background: #93B1A6;
+        border-bottom: 2px solid #e1e1e1;
+        .user-icon-box {
+            width: 45px;
+            height: 45px;
+            margin-left: 10px;
+            border-radius: 50%;
+            background: #304D30;
+            .person-icon {
+                font-size: 1.6rem;
+                color: #fff;
+            }
+        }
+        .user-name-box {
+            p {
+                color: #fff;
+                font-weight: 600;
+            }
+        }
     }
-}
-
-.history-section {
-    flex: 1;
-    width: 100%;
-    background-color: #436850;
-    overflow-y: auto;
-}
-
-.typing-section {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #4b8581;
-    height: 55px;
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto auto auto auto auto;
-}
-
-.input-input {
-    grid-column: 1 / 5;
-    height: 100%;
-    width: 100%;
-    border: none;
-    font-size: 1.2rem;
-    padding: 0px 10px;
-    &:active,
-    &:focus {
-        border: none;
-    }
-}
-
-.send-icon-button {
-    grid-column: 5 / 5;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #2aa819;
-    border: none;
-    i {
-        font-size: 1.2rem;
-        color: #fff;
+    .history-box {
+        background: #5C8374;
+        min-height: 300px;
+        padding: 10px 10px;
+        .history-content {
+            color: #fff;
+            width: fit-content;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        .message-questation {
+            display: flex;
+            justify-content: start;
+            .history-content {
+                background: #82bb39;
+                border-bottom-right-radius: 0px;
+            }
+        }
+        .message-answer {
+            display: flex;
+            justify-content: end;
+            .history-content {
+                background: #163020;
+                border-bottom-left-radius: 0px;
+            }
+        }
     }
 }
